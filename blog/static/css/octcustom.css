@@ -1,0 +1,51 @@
+header[role="banner"] {
+  #logo-main {
+    display: block;
+    margin: 20px auto;
+  }
+}
+
+#navbar-primary.navbar-default {
+  background: transparent;
+  border: none;
+  .navbar-nav { 
+    width: 100%;
+    text-align: center;
+    > li {
+      display: inline-block;
+      float: none;
+      > a {
+        padding-left: 30px;
+        padding-right: 30px;
+        }
+    }
+  }
+}
+
+
+
+
+
+ol{counter-reset:li;list-style:none;*list-style:decimal;font-weight:700;font:18px "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;padding:0 20px;margin-bottom:4em;text-shadow:0 1px 0 rgba(255,255,255,.5);}
+ol ol{margin:0 0 0 2em;}
+
+.rounded-list a{position:relative;display:block;padding:.4em .4em .4em 2em;*padding:.4em;margin:.5em 0;background:#ddd;color:#444;text-decoration:none;border-radius:.3em;transition:all .3s ease-out;}
+.rounded-list a:hover{background:#eee;}
+.rounded-list a:hover:before{transform:rotate(360deg);}
+.rounded-list a:before{content:counter(li);counter-increment:li;position:absolute;left:-1.3em;top:50%;margin-top:-1.3em;background:#87ceeb;height:2em;width:2em;line-height:2em;border:.3em solid #fff;text-align:center;font-weight:bold;border-radius:2em;transition:all .3s ease-out;}
+
+@media screen and (max-width:479px){
+	ol{ font-weight:300;font:18px;  }
+}
+
+
+section{padding:10px 0;}
+section h2{margin:0;font-size:3em;}
+section.success{background:#18BC9C;color:white;}
+@media (max-width:767px){section{padding:75px 0;}
+section.first{padding-top:75px;}
+}
+.team .cover .overlay{height:200px;padding-top:60px;opacity:0;background:#bfbfbf;-webkit-transition:opacity 0.45s ease;transition:opacity 0.45s ease;}
+.team:hover .cover .overlay{opacity:1;}
+.team .avatar{position:relative;z-index:2;margin-top:-50px;margin-bottom:20px;border:2px solid #18BC9C;;border-radius:50%;}
+.team .title{margin:50px 0;}
