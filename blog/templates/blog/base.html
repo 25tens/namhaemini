@@ -14,13 +14,13 @@
     <link rel="stylesheet" href="{% static "css/octcustom.css" %}">    
     <link rel="stylesheet" href="{% static "css/octstyle.css" %}"> 
     <link rel="stylesheet" href="{% static "css/octtgallery.css" %}">     
-
+                                                
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">   
-    <link rel="shortcut icon" href="img/ico/32.png" sizes="32x32" type="image/png"/>
-    <link rel="apple-touch-icon-precomposed" href="img/ico/60.png" type="image/png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/ico/72.png" type="image/png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="img/ico/120.png" type="image/png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="img/ico/152.png" type="image/png"/>
+    <link rel="shortcut icon" href="{% static 'img/favi-bini.png' %}" sizes="32x32" type="image/png"/>
+    <link rel="apple-touch-icon-precomposed" href="{% static 'img/favi-bini.png' %}" type="image/png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{% static 'img/favi-bini.png' %}" type="image/png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="{% static 'img/favi-bini.png' %}" type="image/png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{% static 'img/favi-bini.png' %}" type="image/png"/>
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -30,7 +30,7 @@
   <body id="home">
   
    <header role="banner">
-  <img id="logo-main" src="{% static 'img/logo15.png' %}" width="200" alt="Logo Thing main logo"/>
+  <img id="logo-main" src="{% static 'img/logo010.png' %}" width="200" alt="Logo Thing main logo"/>
 <nav id="navbar-primary" class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -44,9 +44,9 @@
     </div>
     <div class="collapse navbar-collapse" id="navbar-primary-collapse">
       <ul class="nav navbar-nav mr-auto">
-        <li class=""><a href="{% url 'post_list' %}">홈</a></li>
-        <li><a href="#">NONE</a></li>
-        <li><a href="{% url 'gallery' %}">갤러리</a></li>
+        <li class=""><a href="{% url 'post_list' %}">  <i class="fas fa-door-open"></i> &nbsp; &nbsp; 홈</a></li>
+        <!-- <li><a href=" ">NONE</a></li> -->
+        <li><a href="{% url 'gallery' %}"><i class="fas fa-folder-open"></i> &nbsp; &nbsp; 갤러리</a></li>
        
       </ul>
       <ul class="nav navbar-nav navbar-right"> 
