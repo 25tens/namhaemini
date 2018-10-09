@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="{% static "css/octtaehwa.css" %}"> 
     <link rel="stylesheet" href="{% static "css/icon.css" %}">
     <link rel="stylesheet" href="{% static "css/octcustom.css" %}">    
-    <link rel="stylesheet" href="{% static "css/octstyle.css" %}">   
+    <link rel="stylesheet" href="{% static "css/octstyle.css" %}"> 
+    <link rel="stylesheet" href="{% static "css/octtgallery.css" %}">     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">   
     <link rel="shortcut icon" href="img/ico/32.png" sizes="32x32" type="image/png"/>
@@ -29,7 +30,7 @@
   <body id="home">
   
    <header role="banner">
-  <img id="logo-main" src="{% static 'img/logo11.png' %}" width="200" alt="Logo Thing main logo">
+  <img id="logo-main" src="{% static 'img/logo15.png' %}" width="200" alt="Logo Thing main logo"/>
 <nav id="navbar-primary" class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -43,9 +44,9 @@
     </div>
     <div class="collapse navbar-collapse" id="navbar-primary-collapse">
       <ul class="nav navbar-nav mr-auto">
-        <li class="active"><a href="{% url 'post_list' %}">홈</a></li>
+        <li class=""><a href="{% url 'post_list' %}">홈</a></li>
         <li><a href="#">NONE</a></li>
-        <li><a href="#">NONE</a></li>
+        <li><a href="{% url 'gallery' %}">갤러리</a></li>
        
       </ul>
       <ul class="nav navbar-nav navbar-right"> 

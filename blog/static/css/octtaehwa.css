@@ -54,7 +54,7 @@ a:focus {
   background-color: #9245dc;
 }
 #home {
-  border-top: 8px solid #9245dc;
+  border-top: 15px solid #62757f;
 }
 .container-fluid {
   margin-right: auto;
@@ -387,7 +387,7 @@ input[type="checkbox"]:checked + span:before {
 }
 /* ------------------------------ nav menu -------------------------- */
 .main-nav a {
-  color: #000000;
+  color:#000000 ;
 }
 .nav-list {
   list-style-type: none;
@@ -407,7 +407,7 @@ input[type="checkbox"]:checked + span:before {
   text-transform: uppercase;
 }
 .nav-list .active a span {
-  background-color: #000000;
+  background-color: ;
   color: #ffffff;
 }
 .nav-brand {
@@ -1045,7 +1045,7 @@ blockquote .small {
  *
  */
 .footer {
-  background-color: #808080;
+  background-color:;
   padding: 20px 0;
 }
 .footer .copyright ul.nav-list {

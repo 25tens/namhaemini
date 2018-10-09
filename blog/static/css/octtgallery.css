@@ -1,0 +1,17 @@
+.carousel {
+    margin-top: 5px;
+}
+.item .thumb {
+	/*width: 15%;*/
+	width: 22%;
+	cursor: pointer;
+float: left;
+}
+.item .thumb img {
+	width: 98%;
+	margin: 1px;
+	border:1px solid #4dd2ff;
+}
+/*.item img {
+	max-width: 450%;	
+}*/

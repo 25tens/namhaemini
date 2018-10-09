@@ -42,139 +42,135 @@
        </div>
                     
           <div class="col-sm-4">
-            <div class="title" style="background:#999999;color:#FFF;font-weight:300;text-align:center;padding:0.2em 0em;margin: 0 10px;">
-             <h3 class="text-center">미니포크레인 굴삭기</h3>
-             <p><a class="visible-xs " href="tel:010-3880-2868" style="padding:px; text-decoration: none">
-             <i class="fas fa-phone"></i>
+              <div class="panel panel-default" style="border-color: #fff;"> 
+    <div class="panel-heading" style="background:#90a4ae">
+      <h3>미니포크레인 굴삭기</h3>
+        <p><a class="visible-xs " href="tel:010-3880-2868" style="padding:px; text-decoration: none">
+            모든공사전문 &nbsp; &nbsp; <i class="fas fa-phone"></i>
              <font color="#2C3E50"> &nbsp; &nbsp;  010-3880-2868</font>
-             </a></p>
-             <p class="hidden-xs">
-              <i class="fas fa-phone"></i>
-              <font color="#2C3E50"> &nbsp; &nbsp;010-3880-2868</font>
-             </p>
-         
-            </div>
-          <!--  <center>  <h3>소형굴삭기 공사전문</h3> 
-            </center>--> 
-            <ol class="rounded-list">
-              <li><a href="">주택 철거/집수리 공사</a></li>
-              <li><a href="">상하수도/배수로 공사</a></li>
-              <li><a href="">조경/석축 공사</a></li>
-              <li><a href="">보광토 공사</a></li>
-              <li><a href="">각종 토목 공사</a></li> 
-            </ol>
-          </div>
-          </div>
-          </div>
-      
- 
-      <div class="container-fluid"> 
-            
-          <div class="row alert" role="alert" style="background:#999999;color:#FFF;font-weight:;text-align:;padding:0.5em 2em;margin:0 auto;width:98%;" >
-          <p style="font-size:18px" ><i class="far fa-images"></i> 시공 현장 둘러보기</p>   
-         {% for post in post_list %}
-      	 <div class=""  >
-      	 	<ul style="font-family: 'Nanum Gothic', sans-serif; font-weight: ;font-size: 18px;padding:0.5em 2em;"> <li><a href="{% url 'post_detail' pk=post.pk %}"> {{ post.title }} 
-      	 	</a> <span style="color:#eee;font-size: 12px;padding-left: 20px; ">{{ post.published_date }}</span>
-      	  </li></ul>
-      	 </div>  
-        {% endfor %} 
-      </div>
-      </div>
-
-    <section  id="team" >
-    <div class="container-fluid">
-    <div class="row alert" role="alert" style="background:#999999;color:#FFF;font-weight:;text-align:;padding:0.5em 2em;margin:0 auto;width:98%;" >
-    <p style="font-size:18px" ><i class="fas fa-cogs"></i> 버킷 attachment ---현장상황에 맞춤한 다양한 작업장치 보유</p>   
-         
-          
-         
-        </div>
+             </a>
+           </p>
+        <p class="hidden-xs">
+            모든공사전문 &nbsp; &nbsp; <i class="fas fa-phone"></i>
+            <font color="#2C3E50"> &nbsp; &nbsp;010-3880-2868</font>
+            </p> 
+    </div>
+   <!--  <div class="panel-body"> 
+    </div>  -->
      
-      <div class="row" style="margin-top:21px;">
-        
-        <div class="col-sm-4">
-          <div class="team text-center">
-            <div class="cover" style="background:url('static/img/add8.png'); background-size:100%; background-repeat: no-repeat;
+       <ol class="list-group rounded-list">
+           <li class="list-group-item" style="border-top:0 solid #fff"><a href="">주택 철거/집수리 공사</a></li>
+           <li class="list-group-item" style="border-top:0 solid #fff"> <a href="">상하수도/배수로 공사</a></li>
+          <li class="list-group-item" style="border-top:0 solid #fff"><a href="">조경/석축 공사</a></li>
+          <li class="list-group-item" style="border-top:0 solid #fff"><a href="">보광토 공사</a></li>
+      </ol> 
+    </div>
+    </div>           
+    </div>            
+    </div>
+  <div class="container-fluid productlist">
+  <div class="row">
+  <div class="col-sm-12">    
+  <div class="panel panel-default"> 
+    <div class="panel-heading" style="background:#90a4ae"> 
+     <h3 style="font-size:18px" ><i class="far fa-images"></i> &nbsp; &nbsp; 시공 현장 둘러보기</h3> 
+       </div>
+  <!--   <div class="panel-body"> 
+    Some content here
+    </div>  -->
+  <!-- List group inside the panel-->
+  <ul class="list-group">
+    <li class="list-group-item">
+         {% for post in post_list %}
+        <ul style="font-family: 'Nanum Gothic', sans-serif; font-weight: ;font-size: 18px;padding:0.5em 2em;"> <li><a href="{% url 'post_detail' pk=post.pk %}"> {{ post.title }} 
+          </a> <span style="color:#000;font-size: 12px;padding-left: 20px; ">{{ post.published_date }}</span>
+          </li>
+        </ul>
+        {% endfor %} 
+    </li>
+  </ul>
+</div>
+</div>
+</div>
+</div>
+     
+<section  id="team" >
+    <div class="container-fluid">
+    <div class="panel panel-default" "> 
+    <div class="panel-heading" style="background:#90a4ae">
+      <h3  style="font-size:18px">
+        <i class="fas fa-cogs"></i> &nbsp; &nbsp; 버킷 attachment ---현장상황에 맞춤한 다양한 작업장치 보유
+      </h3>
+   </div>
+   </div>
+   <div class="row" style="margin-top:21px;">
+      <div class="col-sm-4">
+      <div class="team text-center">
+      <div class="cover" style="background:url('static/img/add8.png'); background-size:100%; background-repeat: no-repeat;
 background-position: top center;">
-              <div class="overlay text-center">
+        <div class="overlay text-center">
                 <h3 class="white">스탠다드버킷</h3>
                 <h5 class="light light-white"></h5>
-              </div>
-            </div>
-            <img src="{% static 'img/bucket10.png' %}" alt="Team Image" class="avatar">
-           
-          
-          </div>
         </div>
-
-        <div class="col-sm-4">
-          <div class="team text-center">
-          <div class="cover" style="background:url('static/img/add5.png'); background-size:100%; background-repeat: no-repeat;
+      </div>
+            <img src="{% static 'img/bucket10.png' %}" alt="Team Image" class="avatar">
+      </div>
+      </div>
+      <div class="col-sm-4">
+       <div class="team text-center">
+       <div class="cover" style="background:url('static/img/add5.png'); background-size:100%; background-repeat: no-repeat;
 background-position: top center;">
-              <div class="overlay text-center">
+        <div class="overlay text-center">
                 <h3 class="white">기울이기버킷</h3>
                 <h5 class="light light-white"></h5>
-              </div>
-            </div>
-            <img src="{% static 'img/bucket4.png' %}" alt="Team Image" class="avatar">
-           
-            
-          </div>
         </div>
-        <div class="col-sm-4">
-          <div class="team text-center">
-          <div class="cover" style="background:url('static/img/add7.png'); background-size:100%; background-repeat: no-repeat;
-background-position: top center;">
-              <div class="overlay text-center">
-                <h3 class="white">엄지버킷</h3>
-                <h5 class="light light-white"></h5>
-              </div>
-            </div>
-            <img src="{% static 'img/bucket7.png' %}" class="avatar">
-           
-            
-          </div>
-        </div>
-    
       </div>
-            <div class="row">
-        
-        <div class="col-sm-4">
-          <div class="team text-center">
-            <div class="cover" style="background:url('static/img/add2.png'); background-size:100%; background-repeat: no-repeat;
+            <img src="{% static 'img/bucket4.png' %}" alt="Team Image" class="avatar">
+      </div>
+      </div>
+       <div class="col-sm-4">
+       <div class="team text-center">
+      <div class="cover" style="background:url('static/img/add7.png'); background-size:100%; background-repeat: no-repeat;
 background-position: top center;">
-              <div class="overlay text-center">
-                <h3 class="white">채버킷</h3>
-                <h5 class="light light-white"></h5>
-              </div>
-            </div>
-            <img src="{% static 'img/bucket25.png' %}" alt="Team Image" class="avatar">
-           
-          
-          </div>
+         <div class="overlay text-center">
+            <h3 class="white">엄지버킷</h3>
+            <h5 class="light light-white"></h5>
         </div>
+      </div>
+            <img src="{% static 'img/bucket7.png' %}" class="avatar">
+      </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+      <div class="team text-center">
+      <div class="cover" style="background:url('static/img/add2.png'); background-size:100%; background-repeat: no-repeat;
+background-position: top center;">
+        <div class="overlay text-center">
+          <h3 class="white">채버킷</h3>
+          <h5 class="light light-white"></h5>
+        </div>
+      </div>
+            <img src="{% static 'img/bucket25.png' %}" alt="Team Image" class="avatar">
+      </div>
+      </div>
         <div class="col-sm-4">
           <div class="team text-center">
           <div class="cover" style="background:url('static/img/add1.png'); background-size:100%; background-repeat: no-repeat;
 background-position: top center;">
-              <div class="overlay text-center">
-                <h3 class="white">브레이커</h3>
-                <h5 class="light light-white"></h5>
-              </div>
-            </div>
-            <img src="{% static 'img/bucket23.png' %}" alt="Team Image" class="avatar">
-           
-            
-          </div>
+        <div class="overlay text-center">
+          <h3 class="white">브레이커</h3>
+         <h5 class="light light-white"></h5>
         </div>
-        
-    
+      </div>
+        <img src="{% static 'img/bucket23.png' %}" alt="Team Image" class="avatar">
+      </div>
+      </div>
       </div>
     </div>
   </section>
 
-  <footer class="footer" style="background:#808080;">
+  <footer class="footer" style="background:#62757f;">
   <div class="container-fluid">
     <div class="row">
       <div class="col-sm-8">
@@ -252,7 +248,7 @@ background-position: top center;">
 <a class="a2a_button_kakao"></a>
      
 </div>
-<script async src="https://static.addtoany.com/menu/page.js"></script>        
+<script async src="https://static.addtoany.com/menu/page.js"></script>    
           </div>
           </div>
         </div>
