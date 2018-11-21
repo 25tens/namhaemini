@@ -1,21 +1,27 @@
 {% extends 'blog/base.html' %}
 {% load static from staticfiles %}
 
+@import url('https://fonts.googleapis.com/css?family=Lobster');
 {% block content %}
 
-<div class="container-fluid" style="margin-bottom: 20px;">
-  <div class="row content" style="height:">
-   
+<article class="post">
+<div class="container">
 
-    <div class="col-sm-9">
-      <h4><small>이미지는 최대 6장까지 등록가능 </small></h4>
-      <hr>
-        <h1>블로그 꾸미기</h1>
-      
-      <br><br>
-    </div>
-  </div>
- <form id="post_form" method="post" action="" enctype="multipart/form-data">
+	<div class="bread">
+		<ol>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+		</ol>
+	</div>
+
+	<h1>블로그 꾸미기</h1>
+    
+    <P> 제목과 내용은 최대 250자까지 입력할 수 있고,
+        이미지는 최대 6장까지 등록가능합니다.
+    </P>
+
+	
+<form id="post_form" method="post" action="" enctype="multipart/form-data">
    
      {% csrf_token %}
       {{ form.as_p }}
@@ -26,19 +32,16 @@
     <input type="submit" name="submit" value="Submit" />
     
 </form>
- 
+	
+
+	
+
 </div>
+</article>
+
+
    
    
    
-  <footer class="container-fluid" style="background:#62757f;
-      color: white;
-      padding: 15px;">
-      <div class="pull-left copyright">
-                        
-            <p>남해미니중기 &copy; </p>
-           
-      </div>
-        
-  </footer>
+  
 {% endblock %}

@@ -1,28 +1,30 @@
 {% extends 'blog/base.html' %}
 {% load static from staticfiles %}
 
+@import url('https://fonts.googleapis.com/css?family=Lobster');
 {% block content %}
 
+<article class="post">
+<div class="container">
 
-<div class="container-fluid">
-  <div class="row content" style="height:">
-   
+	<div class="bread">
+		<ol>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+		</ol>
+	</div>
 
-    <div class="col-sm-9">
-      <h4><small>최근 시공 현장 </small></h4>
-      <hr>
-      <h2>{{ post.title }}</h2>
-      <h5><span class="glyphicon glyphicon-time"></span>  {{ post.published_date }}</h5>
-      <h5><span class="label label-primary">남해미니중기</span></h5><br>
+	<h1>최근 시공 현장</h1>
+     <P>언제나 최선을 다하겠습니다. 
+    </P>
+	 
+      <h2>{{ post.title }}</h2> 
+    <br>
       <p>{{ post.content|linebreaksbr }}<br>
           {% if post.published_date %}
           {% endif %}
       </p>
-      <br><br>
-    </div>
-  </div>
-
-  <div class="row gallery">
+    <div class="row gallery">
          {% for p in post.images_set.all %}
           <div class="col-sm-3">
             <img src="{{ p.image.url }}" class="img thumbnail">
@@ -31,41 +33,7 @@
 
   </div> 
 </div>
-   
+</article>
 
-<footer class="container-fluid" style="background:#62757f;
-      color: ;
-      padding: 15px;">
-      <div class="pull-left copyright">
-                        
-            <p>남해미니중기 &copy; </p>
-           
-      </div>
-        
+{% endblock %}
 
-      <div class="pull-right">
-    <p>    
-        <a class="visible-xs " href="tel:010-3880-2868" style="padding:px; text-decoration: none">
-    <i class="fa fa-phone-square fa-lg" aria-hidden="true"></i>
-    <font color=""> &nbsp; &nbsp;  010-3880-2868</font>
-    </a>
-    </p>
-    <p class="hidden-xs">
-       <i class="fa fa-phone-square fa-lg" aria-hidden="true"></i>
-       <font color="#2C3E50"> &nbsp; &nbsp;010-3880-2868</font>
-    </p>
-    <p>
-        <i class="fa fa-phone-square fa-lg" aria-hidden="true"></i>
-        <font color="#2C3E50"> &nbsp; &nbsp;055-864-2868</font>
-    </p> 
-    <p>
-        <i class="fa fa-phone-square fa-lg" aria-hidden="true"></i>
-        <font color="#2C3E50"> &nbsp; &nbsp;055-864-1720</font>
-    </p> 
-         </div>
-  
-</footer>
-
- {% endblock  %} 
-    
-  

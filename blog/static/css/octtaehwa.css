@@ -1,6 +1,7 @@
 
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700);
 @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding');
+@import url('https://fonts.googleapis.com/css?family=Gothic+A1');
 html,
 body {
   font-family: 'Source Sans Pro', sans-serif;
@@ -411,14 +412,15 @@ input[type="checkbox"]:checked + span:before {
   color: #ffffff;
 }
 .nav-brand {
-  border: 2px solid #000000;
+/*  border: 2px solid #000000;*/
   width: auto;
-  font-size: 18px;
+  font-size: 36px;
   display: block;
   margin: 0 auto;
   text-align: center;
   width: 250px;
-  font-weight: 300;
+  font-weight: 700;
+  font-family: 'Gothic A1', sans-serif;
   line-height:36px;
   cursor: pointer;
   color: #000000;

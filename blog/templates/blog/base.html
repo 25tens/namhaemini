@@ -1,55 +1,64 @@
 {% load staticfiles %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>남해미니굴삭기</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!doctype html>
-<html>
-  <head>
-    <title>남해미니중기</title>
-    <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static "css/octtaehwa.css" %}"> 
-    <link rel="stylesheet" href="{% static "css/icon.css" %}">
-    <link rel="stylesheet" href="{% static "css/octcustom.css" %}">    
-    <link rel="stylesheet" href="{% static "css/octstyle.css" %}"> 
-    <link rel="stylesheet" href="{% static "css/octtgallery.css" %}">     
-                                                
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">   
-    <link rel="shortcut icon" href="{% static 'img/favi-bini.png' %}" sizes="32x32" type="image/png"/>
-    <link rel="apple-touch-icon-precomposed" href="{% static 'img/favi-bini.png' %}" type="image/png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{% static 'img/favi-bini.png' %}" type="image/png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="{% static 'img/favi-bini.png' %}" type="image/png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{% static 'img/favi-bini.png' %}" type="image/png"/>
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-
-  <body id="home">
   
-   <header role="banner">
-  <img id="logo-main" src="{% static 'img/logo010.png' %}" width="200" alt="Logo Thing main logo"/>
-<nav id="navbar-primary" class="navbar navbar-default" role="navigation">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-primary-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
-    <div class="collapse navbar-collapse" id="navbar-primary-collapse">
-      <ul class="nav navbar-nav mr-auto">
-        <li class=""><a href="{% url 'post_list' %}">  <i class="fas fa-door-open"></i> &nbsp; &nbsp; 홈</a></li>
-        <!-- <li><a href=" ">NONE</a></li> -->
-        <li><a href="{% url 'gallery' %}"><i class="fas fa-folder-open"></i> &nbsp; &nbsp; 갤러리</a></li>
-       
-      </ul>
-      <ul class="nav navbar-nav navbar-right"> 
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/namhae.css' %}"
+>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+<style>
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+</style>
+
+<script src="https://use.fontawesome.com/926fe18a63.js"></script>
+
+<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+<script>
+$(function(){
+	$(".headC").click(function(){
+		$(".headB").slideToggle();
+	});
+});
+</script>
+ <script type="text/javascript" src="/static/js/namhae.js"></script>
+</head>
+<body>
+    
+
+<header class="head-color">
+<div class="container">
+	<div class="container-small">
+		<a href="{% url 'post_list' %}" class="headA">남해미니굴삭기</a>
+
+		<button type="button" class="headC">
+			<span class="fa fa-bars" title="MENU"></span>
+		</button>
+	</div>
+    
+
+	<nav class="headB">
+        
+        <ul>
+			<li><a href="{% url 'post_list' %}">홈</a></li>
+			<li><a href="{% url 'about' %}">미니굴삭기</a></li>
+			<li><a href="{% url 'gallery' %}">갤러리</a></li>
+        
           {% if user.is_authenticated %}
           
        <li class="nav-item dropdown">
@@ -57,39 +66,105 @@
           <span>Hi {{ request.user }} </span>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="{% url 'post_new' %}"><i  class="far fa-edit"></i>&nbsp; &nbsp;블로그꾸미기</a>
-            <br><br>
-          <a class="dropdown-item" href="{% url 'user_logout' %}"><i class="far fa-bell-slash"></i>&nbsp; &nbsp;Logout</a>
+            <a class="dropdown-item" href="{% url 'post_new' %}"> &nbsp;블로그꾸미기</a>
+           
+          <a class="dropdown-item" href="{% url 'user_logout' %}"> &nbsp;로그아웃</a>
         </div>
       </li>
       {% else %}
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'user_login' %}"><i class="far fa-bell">&nbsp; &nbsp;</i>Login</a>
+        <li class="nav-item">
+        <a class="nav-link" href="{% url 'user_login' %}">관리자</a>
       </li>
       {% endif %}
       </ul>  
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-</header><!-- header role="banner" -->
+    </nav>
+</div>
+</header>
+{% block content %}
+{% endblock %}
+<footer>
+<div class="container">
 
+	<div class="footA">
+		<h2>남해미니굴삭기</h2>
+		<p>경남 남해군 남해읍 화전로96번나길9
+		<br>
+		</p>
+
+		<nav class="footD">
+			<ul>
+				<li><a href="#">
+					<span class="fa fa-twitter"
+					 title="Twitter"></span>
+				</a></li>
+
+				<li><a href="#">
+					<span class="fa fa-facebook"
+					 title="Facebook"></span>
+				</a></li>
+
+				<li><a href="#">
+					<span class="fa fa-google-plus"
+					 title="Google Plus"></span>
+				</a></li>
+
+				
+
+			</ul>
+		</nav>
+	</div>
+
+	<nav class="footB">
+		<div>
+			<h3>전화문의</h3>
+         
+<p><a class="" href="tel:010-3880-2868" style="padding:px; text-decoration: none">
+ <i class="fa fa-phone-square fa-lg" aria-hidden="true"></i>
+ &nbsp; &nbsp;  010-3880-2868
+ </a></p>
+  <p>
+        <i class="fa fa-whatsapp fa-lg" aria-hidden="true"></i>
+     
+	<font color=""> &nbsp; &nbsp;055-864-2868</font>
+</p> 
+     <p>
+        <i class="fa fa-whatsapp fa-lg" aria-hidden="true"></i>
+     
+	<font color=""> &nbsp; &nbsp;055-864-1720</font>
+</p> 
+			
+		</div>
+
+		<div>
+			<h3>이메일</h3>
+    <p><i class="fa fa-envelope " aria-hidden="true"></i> 
+ kdc2868@naver.com</p>
+<!--<p> <i class="fa fa-globe fa-lg" aria-hidden="true"></i>
+  www.namhaemini.com </p>-->
+			
+		</div>
+
+		<div>
+			<h3>메뉴</h3>
+			<ul>
+            <li><a href="{% url 'post_list' %}">홈</a></li>
+			<li><a href="{% url 'about' %}">미니굴삭기</a></li>
+			<li><a href="{% url 'gallery' %}">갤러리</a></li>
+				
+			</ul>
+		</div>
+	</nav>
+
+	<div class="footC">
+		© 남해미니굴삭기. All rights reserved.
+	</div>
+
+</div>
+</footer>
+ <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   
-      {% block content %}
-      {% endblock %}
-  
-      
-     <!-- Footer -->
 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous">
 
-      
-       <!-- end wrap       -->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  
-
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="{% static 'js/placeholders.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
-      
-  </body>
-
+</body>
 </html>

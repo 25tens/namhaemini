@@ -4,39 +4,29 @@
 
 {% block content %}
 
-<div class="container-fluid">
-  <div class="row content" style="height:450px">
-   
+<article class="post">
+<div class="container">
 
-    <div class="col-sm-9">
-      <h4><small> </small></h4>
-      <hr>
-      <h2> Login</h2>
+	<div class="bread">
+		<ol>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+		</ol>
+	</div>
+
+	<h1>로그인</h1>
+     <P>관리자 페이지입니다. 사용자ID와 비밀번호를 입력하세요. 
+    </P>
+	 
         <form method="post">
              {% csrf_token %}
              {{ form.as_p}}
           <input type="submit" value="Login" class="btn btn-outline-success">
-        </form>   
-     
-    </div>
-  </div>
+        </form> 
+
 </div>
+</article>
 
-
-
- <footer class="container-fluid" style="background:#62757f;
-      color: white;
-      padding: 15px;">
-      <div class="pull-left copyright">
-                        
-            <p>남해미니중기 &copy; </p>
-           
-      </div>
-        
-
-
- 
-</footer>
 {% endblock %}
 
  

@@ -96,4 +96,7 @@ def user_logout(request):
 def gallery(request):
     
     return render(request,'blog/gallery.html')     
-   
+ 
+def about(request):
+    
+    return render(request,'blog/about.html')         
